@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,700,800,900&display=swap');
+/* common css start */
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul,
+ol{
+    list-style: none;
+}
+
+a,
+a:hover{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    vertical-align: middle;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+/* common css end */
+/*warper css start */
+header{
+    height: 100vh;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #292929;
+    z-index: 10000;
+}
+.warper{
+    height: 100vh;
+    box-sizing: border-box;
+    border: 14px solid #292929;
+    background: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .bdr_shape{
+        height: 50px;
+        width:  50px;
+        background: transparent;
+        border-radius: 2.8px;
+        position: absolute;
+        display: block;
+        z-index: 100;
+    }
+    .shape_1{
+        top: 11%;
+        left: 10%;
+        border-top: 1.5px solid rgba(219, 5, 94, .4);
+        border-left: 1.5px solid rgba(219, 5, 94, .4);
+    }
+    .shape_2{
+        top: 11%;
+        right: 5%;
+        border-top: 1.5px solid rgba(219, 5, 94, .4);
+        border-right: 1.5px solid rgba(219, 5, 94, .4);
+    }
+    .shape_3{
+        bottom: 6%;
+        left: 10%;
+        border-bottom: 1.5px solid rgba(219, 5, 94, .4);
+        border-left: 1.5px solid rgba(219, 5, 94, .4);
+    }
+    .shape_4{
+        bottom: 6%;
+        right: 5%;
+        border-right: 1.5px solid rgba(219, 5, 94, .4);
+        border-bottom: 1.5px solid rgba(219, 5, 94, .4);
+    }
+    .overlay{
+        height: 100%;
+        background: rgba(0, 0, 0, .3);
+    } 
+    
+}
+/*warper css end */
