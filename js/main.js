@@ -1,18 +1,28 @@
-const warperClick = document.querySelector('.warper');
-warperClick.addEventListener('click', () => {
-    menuBtn.classList.remove('open', 'ani');
-});
+// menu btn js start
 const menuBtn = document.querySelector('.menu-btn');
+const warperClick = document.querySelector('.warper');
+const menuBox = document.querySelector('.menu_box');
+const menuBoxBc = document.querySelector('.menu_box_bc');
+warperClick.addEventListener('click', () => {
+    menuBtn.classList.remove('open');
+    menuBox.classList.remove('menu_slide');
+    menuBoxBc.classList.remove('menu_bc_slide');
+});
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
     if(!menuOpen) {
-        menuBtn.classList.add('open', 'ani');
+        menuBtn.classList.add('open');
+        menuBox.classList.add('menu_slide')
+        menuBoxBc.classList.add('menu_bc_slide')
         menuOpen = true;
     } else {
-        menuBtn.classList.remove('open', 'ani' );
+        menuBtn.classList.remove('open');
+        menuBox.classList.remove('menu_slide');
+        menuBoxBc.classList.remove('menu_bc_slide');
         menuOpen = false;
     }
 });
+// menu btn js ends
 // countdown js start
 var countDate = new Date('Feb 5, 2021 00:00:00').getTime();
 
