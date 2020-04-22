@@ -1,3 +1,5 @@
+$coomon_color : #C87C1A;
+$icon_color : rgba(255, 255, 255, 0.41);
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,700,800,900&display=swap');
 /* common css start */
 *{
@@ -47,87 +49,151 @@ body{
 /*warper css start */
 header{
     height: 100vh;
-    width: 90px;
+    width: 80px;
     position: absolute;
     top: 0;
     left: 0;
     background: #292929;
     z-index: 10000;
     .content{
-        .menu{
-            position: relative;
+        position: relative;
+        height: 100%;
+        .logo{
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            transform: translate(-50%,0);
+            height: 60px;
+            width: 60px;
+            opacity: .8;
+            box-sizing: border-box;
+            padding: 3px 5px;
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .main_box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: rgba(255, 255, 255, 0.05);
             width: 100%;
-            .menu-btn{
-                z-index: 200;
-                position: relative;
-                display: flex;
-                justify-content: flex-start;
-                width: 50px;
-                height: 40px;
-                cursor: pointer;
-                transition: all .5s ease-in-out;
-                .menu-btn_burger{
-                    width: 30px;
-                    height: 2px;
-                    background: #ffffff;
-                    border-radius: 5px;
-                    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-                    transition: all .5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 55vh;
+            box-sizing: border-box;
+            border-top: 3px solid $coomon_color;
+            border-bottom: 3px solid $coomon_color;
+            .menu_social_icon_box{
+                .social_icon{
+                    ul{
+                        li{
+                            a{
+                                display: inline-block;
+                                height: 38px;
+                                width: 38px;
+                                font-size: 17px;
+                                text-align: center;
+                                line-height: 37px;
+                                color: $icon_color;
+                                border: 1px solid rgba(255, 255, 255, 0.08);
+                                transition: all linear .5s;
+                                margin-top: 8px;
+                                border-radius: 5px;
+                            }
+                            a:hover{
+                                color: $coomon_color;
+                            }
+                        }
+                    }
                 }
-                .menu-btn_burger::before,
-                .menu-btn_burger::after{
-                    content: '';
-                    position: absolute;
-                    height: 2px;
-                    background: #ffffff;
-                    border-radius: 5px;
-                    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-                    transition: all .5s ease-in-out;
+                .social_icon.s_upper{
+                    padding-bottom: 30px;
                 }
-                .menu-btn_burger::before{
-                    width: 40px;
-                    transform: translateY(-10px);
+                .social_icon.s_lower{
+                    padding-top: 23px;
                 }
-                .menu-btn_burger::after{
-                    width: 20px;
-                    transform: translateY(10px);
-                }
-            }
-            .menu-btn::after{
-                content: "MENU";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                color: #ffffff;
-            }
-            .menu-btn:hover{
-                .menu-btn_burger{
-                    width: 40px;
-                    background: rgba(255, 101, 47, .7);
-                }
-                .menu-btn_burger::before{
-                    background: rgba(255, 101, 47, .7);
-                }
-                .menu-btn_burger::after{
-                    width: 40px;
-                    background: rgba(255, 101, 47, .7);
-                }
-            }
-            /*for animation */ 
-            .menu-btn.open{
-                .menu-btn_burger{
-                    width: 40px;
-                    transform: translateX(-50px);
-                    background: transparent;
-                    box-shadow: none;
-                }
-                .menu-btn_burger::before{
-                    transform: rotate(45deg) translate(35px, -35px);
-                    width: 40px;
-                }
-                .menu-btn_burger::after{
-                    transform: rotate(-45deg) translate(35px, 35px);
-                    width: 40px;
+                .menu{
+                    position: relative;
+                    width: 100%;
+                    .menu-btn{
+                        z-index: 200;
+                        position: relative;
+                        width: 50px;
+                        height: 40px;
+                        cursor: pointer;
+                        transition: all .5s ease-in-out;
+                        .menu-btn_burger{
+                            width: 27px;
+                            height: 2px;
+                            background: $icon_color;
+                            border-radius: 5px;
+                            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                            transition: all .5s ease-in-out;
+                        }
+                        .menu-btn_burger::before,
+                        .menu-btn_burger::after{
+                            content: '';
+                            position: absolute;
+                            height: 2px;
+                            background: $icon_color;
+                            border-radius: 5px;
+                            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                            transition: all .5s ease-in-out;
+                        }
+                        .menu-btn_burger::before{
+                            width: 35px;
+                            transform: translateY(-10px);
+                        }
+                        .menu-btn_burger::after{
+                            width: 22px;
+                            transform: translateY(10px);
+                        }
+                    }
+                    .menu-btn::after{
+                        content: "MENU";
+                        position: absolute;
+                        font-size: 13px;
+                        bottom: 0;
+                        left: 0;
+                        color: $icon_color;
+                        transition: all .5s ease-in-out;
+                    }
+                    .menu-btn:hover{
+                        .menu-btn_burger{
+                            width: 35px;
+                            background: $coomon_color;
+                        }
+                        .menu-btn_burger::before{
+                            background: $coomon_color;
+                        }
+                        .menu-btn_burger::after{
+                            width: 35px;
+                            background: $coomon_color;
+                        }
+                        
+                    }
+                    .menu-btn:hover::after{
+                        color: $coomon_color;
+                    }
+                    /*for animation */ 
+                    .menu-btn.open{
+                        .menu-btn_burger{
+                            width: 35px;
+                            transform: translateX(-50px);
+                            background: transparent;
+                            box-shadow: none;
+                        }
+                        .menu-btn_burger::before{
+                            transform: rotate(45deg) translate(35px, -35px);
+                            width: 35px;
+                        }
+                        .menu-btn_burger::after{
+                            transform: rotate(-45deg) translate(35px, 35px);
+                            width: 35px;
+                        }
+                    }
                 }
             }
         }
@@ -135,7 +201,7 @@ header{
 }
 .menu_box{
     position: absolute;
-    left: -300%;
+    left: -340%;
     top: 50%;
     transform: translateY(-50%);
     height: 500px;
@@ -145,22 +211,22 @@ header{
     transition: all 1.2s ease-in-out;
 }
 .menu_box.menu_slide{
-    left: 90px;
+    left: 80px;
 }
 .menu_box_bc{
     position: absolute;
     z-index: 90;
-    left: -100%;
+    left: -150%;
     top: 50%;
     transform: translateY(-50%);
     height: 500px;
     width: 660px;
     z-index: 100;
-    background: rgba(255, 0, 0, 1);
+    background: $coomon_color;
     transition: all 1.2s ease-in-out;
 }
 .menu_box_bc.menu_bc_slide{
-    left: 90px;
+    left: 80px;
 }
 
 
@@ -212,7 +278,7 @@ header{
         .content{
             display: grid;
             width: 100%;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 53% 47%;
             .left{
                 position: relative;
                 height: 100%;
@@ -221,8 +287,8 @@ header{
                 content: '';
                 position: absolute;
                 height: 350px;
-                width: 2.5px;
-                background: rgba(255, 255, 255, .6);
+                width: 1.5px;
+                background: rgba(255, 255, 255, .9);
                 right: 0;
                 top: 50vh;
                 transform: translate(0, -50%);
