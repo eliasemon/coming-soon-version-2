@@ -201,7 +201,7 @@ header{
 }
 .menu_box{
     position: absolute;
-    left: -340%;
+    left: -450%;
     top: 50%;
     transform: translateY(-50%);
     height: 500px;
@@ -209,6 +209,128 @@ header{
     z-index: 100;
     background: rgba(0, 0, 0, 1);
     transition: all 1.2s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    .content{
+        height: 100%;
+        width: 100%;
+        padding-left: 70px;
+        position: relative;
+        .shape_1{
+            height: 50px;
+            width:  50px;
+            background: transparent;
+            border-radius: 2.8px;
+            position: absolute;
+            display: block;
+            z-index: 100;
+            top: 5%;
+            right: 5%;
+            border-top: 1px solid rgba(118, 131, 125, .7);
+            border-right: 1px solid rgba(118, 131, 125, .7);
+        }
+        .shape_2{
+            height: 50px;
+            width:  50px;
+            background: transparent;
+            border-radius: 2.8px;
+            position: absolute;
+            display: block;
+            z-index: 100;
+            bottom: 5%;
+            right: 5%;
+            border-bottom: 1px solid rgba(118, 131, 125, .7);
+            border-right: 1px solid rgba(118, 131, 125, .7);
+        }
+        .logo{
+            padding: 50px 0 0;
+        }
+        ul{
+            margin-top: 40px;
+            li{
+                a{
+                    display: inline-block;
+                    color: $icon_color;
+                    height: 40px;
+                    width: 340px;
+                    padding-left: 30px;
+                    line-height: 40px;
+                    box-sizing: border-box;
+                    transition: all .4s ease-in-out;
+                }
+                a:hover{
+                    color: $coomon_color;
+                    border-left: 2px solid $coomon_color;
+                    border-right: 2px solid $coomon_color;
+                    padding-left: 40px;
+                }
+                a.active{
+                    border-left: 2px solid $coomon_color;
+                    border-right: 2px solid $coomon_color;
+                    background: rgba(255, 255, 255, .1);
+                }
+            }
+            li.last{
+                margin: 20px 0 50px;
+            }
+        }
+        p{
+            width: 90%;
+            margin: auto;
+            font-size: 20px;
+            color: rgba(255, 255, 255, .8);
+            span.text{
+                color: $coomon_color;
+            }
+            span.left{
+                height: 1px;
+                width: 165px;
+                background: rgba(255, 255, 255, .6);
+                display: inline-block;
+                vertical-align: top;
+                margin-right: -55px;
+                position: relative;
+            }
+            span.left::after{
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -5px;
+                height: 10px;
+                width: 10px;
+                background: rgba(255, 255, 255, 1);
+                border-radius: 50%;
+            }
+            span.right{
+                height: 1px;
+                width: 165px;
+                background: rgba(255, 255, 255, .6);
+                display: inline-block;
+                vertical-align: bottom;
+                margin-left: -48px;
+                position: relative;
+            }
+            span.right::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -5px;
+                height: 10px;
+                width: 10px;
+                background: rgba(255, 255, 255, 1);
+                border-radius: 50%;
+            }
+        }
+    }
+    .content::after{
+        content:'';
+        background: $coomon_color;
+        position: absolute;
+        height: 230px;
+        width: 10px;
+        top: 50%;
+        right: -5px;
+        transform: translate(0, -50%);
+    }
 }
 .menu_box.menu_slide{
     left: 80px;
@@ -231,6 +353,7 @@ header{
 
 
 .warper{
+    transition: all .5s ease-in-out;
     z-index: 50;
     height: 100vh;
     box-sizing: border-box;
@@ -273,6 +396,7 @@ header{
         border-bottom: 1px solid rgba(118, 131, 125, .7);
     }
     .overlay{
+        transition: all .5s ease-in-out;
         height: 100%;
         background: rgba(0, 0, 0, .4);
         .content{
@@ -298,5 +422,13 @@ header{
         }
     } 
     
+}
+.warper.filter_{
+    transition: all .5s ease-in-out;
+    filter: blur(2px);
+    .overlay{
+        transition: all .5s ease-in-out;
+        background: rgba(0, 0, 0, .6);
+    }
 }
 /*warper css end */

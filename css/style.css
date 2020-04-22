@@ -232,7 +232,7 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn.open .menu-btn_b
 
 .menu_box {
   position: absolute;
-  left: -340%;
+  left: -450%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -242,6 +242,146 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn.open .menu-btn_b
   background: black;
   -webkit-transition: all 1.2s ease-in-out;
   transition: all 1.2s ease-in-out;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+}
+
+.menu_box .content {
+  height: 100%;
+  width: 100%;
+  padding-left: 70px;
+  position: relative;
+}
+
+.menu_box .content .shape_1 {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border-radius: 2.8px;
+  position: absolute;
+  display: block;
+  z-index: 100;
+  top: 5%;
+  right: 5%;
+  border-top: 1px solid rgba(118, 131, 125, 0.7);
+  border-right: 1px solid rgba(118, 131, 125, 0.7);
+}
+
+.menu_box .content .shape_2 {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border-radius: 2.8px;
+  position: absolute;
+  display: block;
+  z-index: 100;
+  bottom: 5%;
+  right: 5%;
+  border-bottom: 1px solid rgba(118, 131, 125, 0.7);
+  border-right: 1px solid rgba(118, 131, 125, 0.7);
+}
+
+.menu_box .content .logo {
+  padding: 50px 0 0;
+}
+
+.menu_box .content ul {
+  margin-top: 40px;
+}
+
+.menu_box .content ul li a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.41);
+  height: 40px;
+  width: 340px;
+  padding-left: 30px;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.menu_box .content ul li a:hover {
+  color: #C87C1A;
+  border-left: 2px solid #C87C1A;
+  border-right: 2px solid #C87C1A;
+  padding-left: 40px;
+}
+
+.menu_box .content ul li a.active {
+  border-left: 2px solid #C87C1A;
+  border-right: 2px solid #C87C1A;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu_box .content ul li.last {
+  margin: 20px 0 50px;
+}
+
+.menu_box .content p {
+  width: 90%;
+  margin: auto;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menu_box .content p span.text {
+  color: #C87C1A;
+}
+
+.menu_box .content p span.left {
+  height: 1px;
+  width: 165px;
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -55px;
+  position: relative;
+}
+
+.menu_box .content p span.left::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -5px;
+  height: 10px;
+  width: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+.menu_box .content p span.right {
+  height: 1px;
+  width: 165px;
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: -48px;
+  position: relative;
+}
+
+.menu_box .content p span.right::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  height: 10px;
+  width: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+.menu_box .content::after {
+  content: '';
+  background: #C87C1A;
+  position: absolute;
+  height: 230px;
+  width: 10px;
+  top: 50%;
+  right: -5px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .menu_box.menu_slide {
@@ -268,6 +408,8 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn.open .menu-btn_b
 }
 
 .warper {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   z-index: 50;
   height: 100vh;
   -webkit-box-sizing: border-box;
@@ -317,6 +459,8 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn.open .menu-btn_b
 }
 
 .warper .overlay {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
@@ -345,6 +489,19 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn.open .menu-btn_b
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   border-radius: 20px;
+}
+
+.warper.filter_ {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.warper.filter_ .overlay {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /*warper css end */

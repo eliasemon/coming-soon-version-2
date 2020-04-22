@@ -7,6 +7,8 @@ warperClick.addEventListener('click', () => {
     menuBtn.classList.remove('open');
     menuBox.classList.remove('menu_slide');
     menuBoxBc.classList.remove('menu_bc_slide');
+    warperClick.classList.remove('filter_');
+
 });
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
@@ -14,11 +16,13 @@ menuBtn.addEventListener('click', () => {
         menuBtn.classList.add('open');
         menuBox.classList.add('menu_slide')
         menuBoxBc.classList.add('menu_bc_slide')
+        warperClick.classList.add('filter_');
         menuOpen = true;
     } else {
         menuBtn.classList.remove('open');
         menuBox.classList.remove('menu_slide');
         menuBoxBc.classList.remove('menu_bc_slide');
+        warperClick.classList.remove('filter_');
         menuOpen = false;
     }
 });
