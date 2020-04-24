@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Audiowide&display=swap");
 /* common css start */
 * {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Audiowide', cursive;
 }
 
 ul,
@@ -14,7 +14,7 @@ ol {
 
 a,
 a:hover {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Audiowide', cursive;
   text-decoration: none;
 }
 
@@ -26,13 +26,13 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Audiowide', cursive;
 }
 
 p {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Audiowide', cursive;
 }
 
 img {
@@ -40,8 +40,8 @@ img {
 }
 
 body {
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  font-family: 'Audiowide', cursive;
 }
 
 /* common css end */
@@ -49,7 +49,7 @@ body {
 header {
   height: 100vh;
   width: 80px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: #292929;
@@ -183,7 +183,7 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn .menu-btn_burger
 header .content .main_box .menu_social_icon_box .menu .menu-btn::after {
   content: "MENU";
   position: absolute;
-  font-size: 13px;
+  font-size: 10px;
   bottom: 0;
   left: 0;
   color: rgba(255, 255, 255, 0.41);
@@ -407,6 +407,36 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn.open .menu-btn_b
   left: 80px;
 }
 
+/* all demo css */
+.main {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#c87c1a), to(#ffffff));
+  background: linear-gradient(to bottom right, #c87c1a 0%, #ffffff 100%);
+  border: 7px solid #292929;
+}
+
+.main .overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.main .overlay .content .all_demo {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  margin-left: 40px;
+  -ms-grid-columns: 49% 49%;
+      grid-template-columns: 49% 49%;
+}
+
+.main .overlay .content .all_demo .item {
+  height: 276px;
+  border: 1px solid #fff;
+  margin: 15px;
+}
+
+/* default demo css */
 .warper {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -462,46 +492,224 @@ header .content .main_box .menu_social_icon_box .menu .menu-btn.open .menu-btn_b
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .warper .overlay .content {
+  height: 100vh;
   display: -ms-grid;
   display: grid;
-  width: 100%;
-  -ms-grid-columns: 53% 47%;
-      grid-template-columns: 53% 47%;
+  -ms-grid-columns: 55% 45%;
+      grid-template-columns: 55% 45%;
 }
 
 .warper .overlay .content .left {
   position: relative;
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.warper .overlay .content .left .countdown {
+  position: relative;
+  margin-right: 50px;
+}
+
+.warper .overlay .content .left .countdown .corner_1 {
+  z-index: 100;
+  position: absolute;
+  bottom: 20px;
+  left: -70px;
+  height: 90px;
+  width: 90px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.warper .overlay .content .left .countdown .corner_2 {
+  z-index: 100;
+  position: absolute;
+  bottom: 20px;
+  right: -90px;
+  height: 90px;
+  width: 90px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.warper .overlay .content .left .countdown .upper div#day {
+  color: #e6e6e6;
+  font-size: 130px;
+  text-align: left;
+  line-height: .6;
+  position: relative;
+}
+
+.warper .overlay .content .left .countdown .upper div#day::after {
+  content: 'Days';
+  position: absolute;
+  top: 0;
+  right: -70px;
+  font-size: 30px;
+}
+
+.warper .overlay .content .left .countdown .lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.warper .overlay .content .left .countdown .lower div {
+  height: 60px;
+  width: 33px;
+  line-height: 60px;
+  font-size: 17px;
+  margin: 0 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 85% 15%;
+      grid-template-columns: 85% 15%;
+  color: #e6e6e6;
+}
+
+.warper .overlay .content .left .countdown .lower div .text {
+  padding-left: 2px;
+  text-align: left;
+  opacity: .9;
+  -webkit-filter: blur(0.43px);
+          filter: blur(0.43px);
+}
+
+.warper .overlay .content .left .countdown .lower div #hour, .warper .overlay .content .left .countdown .lower div #minute, .warper .overlay .content .left .countdown .lower div #second {
+  text-align: right;
+  -webkit-transition: all linear .4s;
+  transition: all linear .4s;
+}
+
+.warper .overlay .content .left .text_ {
+  position: absolute;
+  bottom: 28%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 600px;
+}
+
+.warper .overlay .content .left .text_ p {
+  font-size: 20px;
+  text-align: center;
+  color: #b0acac;
+  position: relative;
+}
+
+.warper .overlay .content .left .text_ p span.left_ {
+  height: 1px;
+  width: 100px;
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -55px;
+  position: relative;
+}
+
+.warper .overlay .content .left .text_ p span.right_ {
+  height: 1px;
+  width: 100px;
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: -48px;
+  position: relative;
+}
+
+.warper .overlay .content .left .text_ p span.left_2 {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  background: #C87C1A;
+  vertical-align: middle;
+  position: relative;
+}
+
+.warper .overlay .content .left .text_ p span.left_2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -104px;
+  height: 1px;
+  width: 100px;
+  background: #C87C1A;
+}
+
+.warper .overlay .content .left .text_ p span.right_2 {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  background: #C87C1A;
+  vertical-align: middle;
+  position: relative;
+}
+
+.warper .overlay .content .left .text_ p span.right_2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -104px;
+  height: 1px;
+  width: 100px;
+  background: #C87C1A;
 }
 
 .warper .overlay .content .left::after {
   content: '';
   position: absolute;
   height: 350px;
-  width: 1.5px;
-  background: rgba(255, 255, 255, 0.9);
+  width: 2px;
+  background: white;
   right: 0;
-  top: 50vh;
+  top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   border-radius: 20px;
 }
 
+.warper .overlay .content .right {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.warper .overlay .content .right .slider_ {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 100%;
+}
+
 .warper.filter_ {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
 }
 
 .warper.filter_ .overlay {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /*warper css end */

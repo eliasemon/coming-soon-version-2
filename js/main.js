@@ -1,6 +1,6 @@
 // menu btn js start
 const menuBtn = document.querySelector('.menu-btn');
-const warperClick = document.querySelector('.warper');
+const warperClick = document.querySelector('.for_menu');
 const menuBox = document.querySelector('.menu_box');
 const menuBoxBc = document.querySelector('.menu_box_bc');
 warperClick.addEventListener('click', () => {
@@ -43,11 +43,18 @@ function launch(){
     var h = Math.floor((gap % (day)) / (hour));
     var m = Math.floor((gap % (hour)) / (minute));
     var s = Math.floor((gap % (minute)) / (second));
+    
+    var dd = d > 9 ? "" + d: "0" + d;
+    var hh = h > 9 ? "" + h: "0" + h;
+    var mm = m > 9 ? "" + m: "0" + m;
+    var ss = s > 9 ? "" + s: "0" + s;
 
-    document.getElementById('day').innerText = d;
-    document.getElementById('hour').innerText = h;
-    document.getElementById('minute').innerText = m;
-    document.getElementById('second').innerText = s;
+    // hh += "<span>" + "H" + "</span>";
+    
+    document.getElementById('day').innerText = dd;
+    document.getElementById('hour').innerText = hh;
+    document.getElementById('minute').innerText = mm;
+    document.getElementById('second').innerText = ss;
 };
 setInterval (function(){
     launch();
