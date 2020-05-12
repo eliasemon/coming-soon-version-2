@@ -1,12 +1,11 @@
 $coomon_color : #C87C1A;
 $icon_color : rgba(255, 255, 255, 0.41);
-@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Poppins:300,400,500&display=swap');
 /* common css start */
 *{
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
-    font-family: 'Audiowide', cursive;;
 }
 
 ul,
@@ -16,7 +15,7 @@ ol{
 
 a,
 a:hover{
-    font-family: 'Audiowide', cursive;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
 
@@ -34,7 +33,7 @@ h6{
 p{
     padding: 0;
     margin: 0;
-    font-family: 'Audiowide', cursive;
+    font-family: 'Poppins', sans-serif;
 }
 
 img{
@@ -44,6 +43,7 @@ img{
 body{
     overflow-x: hidden;
     font-family: 'Audiowide', cursive;
+    font-family: 'Poppins', sans-serif;
 }
 /* common css end */
 /*warper css start */
@@ -392,6 +392,7 @@ header{
     background-position: center;
     background-size: cover;
     position: relative;
+
     .bdr_shape{
         height: 55px;
         width:  55px;
@@ -428,7 +429,7 @@ header{
     .overlay{
         transition: all .5s ease-in-out;
         height: 100%;
-        background: rgba(0, 0, 0, .6);
+        background: rgba(0, 0, 0, .7);
         .content{
             height: 100%;
             width: 100%;
@@ -447,7 +448,7 @@ header{
                         z-index: 100;
                         position: absolute;
                         bottom: 20px;
-                        left: -70px;
+                        left: -90px;
                         height: 90px;
                         width: 90px;
                         border-left: 1px solid #fff;
@@ -457,7 +458,7 @@ header{
                         z-index: 100;
                         position: absolute;
                         bottom: 20px;
-                        right: -90px;
+                        right: -110px;
                         height: 90px;
                         width: 90px;
                         border-right: 1px solid #fff;
@@ -473,8 +474,9 @@ header{
                             &::after{
                                 content: 'Days';
                                 position: absolute;
+                                color: $coomon_color;
                                 top: 0;
-                                right: -70px;
+                                right: -90px;
                                 font-size: 30px;
                             }
                         }
@@ -494,9 +496,10 @@ header{
                             grid-template-columns: 85% 15%;
                             color: #e6e6e6;
                             .text{
-                                padding-left: 2px;
+                                padding-left: 4px;
                                 text-align: left;
-                                opacity: .9;
+                                opacity: 1;
+                                color: $coomon_color;
                                 filter: blur(.43px);
                             }
                             #hour,#minute,#second{
@@ -626,16 +629,34 @@ header{
                             margin-left: 0;
                             margin-bottom: 0;
                             li{
-                                width: 10px;
-                                height: 10px;
+                                width: 7px;
+                                height: 7px;
                                 border-radius: 50%;
                                 margin-left: 18px;
+                                position: relative;
+                                transition: all .8s ease-in-out;
+                            }
+                            li.active{
+                                transition: all linear .8s;;
+                                &::after{
+                                    content: '';
+                                    height: 20px;
+                                    width: 20px;
+                                    border: 1px solid $coomon_color;
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    top: -86%;
+                                    left: -80%;
+                                    transition: all .8s ease-in-out; 
+                                    opacity: .6;
+                                }
                             }
                         }
                         .carousel-inner{
                             height: inherit;
+
                             .carousel-item{
-                                height: 100vh;
+                                height: 50vh;
                                 position: relative;
                                 .caption_{
                                     color: #fff;
@@ -643,7 +664,47 @@ header{
                                     top: 50%;
                                     transform: translate(0, -50%);
                                     width: 95%;
-                                    padding-left: 30px;
+                                    padding-left: 25px;
+                                    h5{
+                                        font-size: 43px;
+                                        margin-bottom: 25px;
+                                        line-height: 1;
+                                        span{
+                                            color: $coomon_color;
+                                        }
+                                    }
+                                    form {
+                                        width: 380px;
+                                        height: 50px;
+                                        border-radius: 26px;
+                                        outline: 0;
+                                        display: grid;
+                                        grid-template-columns: 75% 25%;
+                                        box-sizing: border-box;
+                                        border-radius: 20px;
+                                        input{
+                                            border: 1px solid $coomon_color;
+                                            outline: 0;
+                                            padding: 0 15px;
+                                            background: rgba(0, 0, 0, 0.4);
+                                            box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+                                        }
+                                        input[type=email]{
+                                            border-radius: 20px 0 0 20px;
+                                            color: rgba(255, 255, 255, 0.8);
+                                        }
+                                        input[type=submit]{
+                                            border-radius: 0 20px 20px 0;
+                                            background: rgba($color: #C87C1A, $alpha: .3);
+                                            opacity: 1;
+                                            transition: all  .3s ease-in-out;
+                                            color: rgba(255, 255, 255, 1);
+                                            &:hover{
+                                                opacity: 1;
+                                                background: rgba($color: #C87C1A, $alpha: 1.0);
+                                            }
+                                        }
+                                    }
                                 }
                             } 
                         }
