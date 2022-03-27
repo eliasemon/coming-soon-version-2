@@ -28,7 +28,7 @@ menuBtn.addEventListener('click', () => {
 });
 // menu btn js ends
 // countdown js start
-var countDate = new Date('Feb 5, 2021 00:00:00').getTime();
+var countDate = new Date('Feb 5, 2024 00:00:00').getTime();
 
 function launch(){
     var now = new Date().getTime();
